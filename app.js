@@ -1,5 +1,5 @@
 /* get user input to decide what to do */
-let userAction = toLowerCase(prompt("What would you like to do?"));
+let userAction = prompt("What would you like to do?").toLowerCase;
 
 const toDoList = [];
 
@@ -45,7 +45,7 @@ while (userAction !== quit){
         alert("Please enter a valid action item. You can enter new, list, delete or quit");    
     }
 
-    userAction = toLowerCase(prompt("What would you like to do?"));
+    userAction = prompt("What would you like to do?").toLowerCase;
 
 }
 
