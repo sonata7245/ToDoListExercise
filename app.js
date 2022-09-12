@@ -5,7 +5,7 @@ const toDoList = [];
 
 /* while until quit run program */
 
-while (userAction !== quit){
+while (userAction !== "quit"){
     /* add new todo */
     if (userAction === "new"){
         let newToDo = prompt("Please enter the new ToDo");
