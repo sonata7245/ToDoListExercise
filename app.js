@@ -17,7 +17,7 @@ while (userAction !== "quit") {
     else if (userAction === "list") {
         console.log("*****************************");
         for (let i = 0; i < toDoList.length; i++) {
-            console.log(`${i + 1} : ${toDoList[i]}`);
+            console.log(`${i} : ${toDoList[i]}`);
         }
         console.log("*****************************");
 
