@@ -1,5 +1,6 @@
 /* get user input to decide what to do */
-let userAction = prompt("What would you like to do?").toLowerCase();
+let userAction = prompt("What would you like to do?");
+    userAction = userAction.toLowerCase();
 const toDoList = [];
 
 /* while until quit run program */
@@ -44,7 +45,8 @@ while (userAction !== "quit"){
         alert("Please enter a valid action item. You can enter new, list, delete or quit");    
     }
 
-    userAction = prompt("What would you like to do?").toLowerCase();
+    userAction = prompt("What would you like to do?");
+    userAction = userAction.toLowerCase();
 
 }
 
