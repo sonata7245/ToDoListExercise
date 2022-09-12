@@ -1,39 +1,38 @@
 /* get user input to decide what to do */
 let userAction = prompt("What would you like to do?");
-    userAction = userAction.toLowerCase();
+userAction = userAction.toLowerCase();
 const toDoList = [];
 
 /* while until quit run program */
 
-while (userAction !== "quit"){
+while (userAction !== "quit") {
     /* add new todo */
-    if (userAction === "new"){
+    if (userAction === "new") {
         let newToDo = prompt("Please enter the new ToDo");
         let addedItem = toDoList.push(newToDo);
-      console.log(addedItem);
+        console.log(addedItem);
     }
 
     /* list todos */
-    else if (userAction === "list"){
+    else if (userAction === "list") {
         console.log("*****************************");
-        for (let i = 0; i < toDoList.length; i++){
-            console.log(`${i+1} : ${toDoList[i]}`);
+        for (let i = 0; i < toDoList.length; i++) {
+            console.log(`${i + 1} : ${toDoList[i]}`);
         }
         console.log("*****************************");
 
     }
     /* delete todo */
-    else if (userAction === "delete"){
-       let deleteIndex = parseInt(prompt("Please enter the index of the item you want to delete"));
-       deleteIndex -= 1;
+    else if (userAction === "delete") {
+        let deleteIndex = parseInt(prompt("Please enter the index of the item you want to delete"));
 
-       while (!deleteIndex || deleteIndex >= toDoList.length -1) {
-        deleteIndex = parseInt(prompt(`Please enter a valid number. Between 1 & ${toDoList.length}`));
-       }
+        while ( (!deleteIndex && deleteIndex !== 0) || deleteIndex >= toDoList.length) {
+            deleteIndex = parseInt(prompt(`Please enter a valid number. Between 0 & ${toDoList.length -1}`));
+        }
 
-       let deletedItem = toDoList.splice(deleteIndex, 1);
-       console.log(deletedItem);
-       
+        let deletedItem = toDoList.splice(deleteIndex, 1);
+        console.log(deletedItem);
+
 
     }
     /*quit program*/
@@ -43,7 +42,7 @@ while (userAction !== "quit"){
     }
 
     else {
-        alert("Please enter a valid action item. You can enter new, list, delete or quit");    
+        alert("Please enter a valid action item. You can enter new, list, delete or quit");
     }
 
     userAction = prompt("What would you like to do?");
