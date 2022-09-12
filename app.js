@@ -17,7 +17,7 @@ while (userAction !== "quit"){
     else if (userAction === "list"){
         console.log("*****************************");
         for (let i = 0; i < toDoList.length; i++){
-            console.log(`${i} : ${toDoList[i]}`);
+            console.log(`${i+1} : ${toDoList[i]}`);
         }
         console.log("*****************************");
 
@@ -25,9 +25,10 @@ while (userAction !== "quit"){
     /* delete todo */
     else if (userAction === "delete"){
        let deleteIndex = parseInt(prompt("Please enter the index of the item you want to delete"));
+       deleteIndex -= 1;
 
-       while (!deleteIndex || deleteIndex >= toDoList.length) {
-        deleteIndex = parseInt(prompt(`Please enter a valid number. Between 0 & ${toDoList.length - 1}`));
+       while (!deleteIndex || deleteIndex >= toDoList.length -1) {
+        deleteIndex = parseInt(prompt(`Please enter a valid number. Between 1 & ${toDoList.length}`));
        }
 
        let deletedItem = toDoList.splice(deleteIndex, 1);
