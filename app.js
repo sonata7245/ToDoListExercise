@@ -27,7 +27,7 @@ while (userAction !== "quit"){
        let deleteIndex = parseInt(prompt("Please enter the index of the item you want to delete"));
 
        while (!deleteIndex || deleteIndex >= toDoList.length) {
-        deleteIndex = parseInt(prompt(`Please enter a valid number. Between 0 & ${ToDoList.length - 1}`));
+        deleteIndex = parseInt(prompt(`Please enter a valid number. Between 0 & ${toDoList.length - 1}`));
        }
 
        let deletedItem = toDoList.splice(deleteIndex, 1);
